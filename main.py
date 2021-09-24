@@ -4,6 +4,7 @@ import sys
 import matplotlib.pyplot as plt
 import buffonTest
 import hitOrMiss
+import htmForMultiDim
 
 # 실행 command line에서 parameter을 받아온다
 needleLen = float(sys.argv[1])  # 바늘 크기
