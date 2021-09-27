@@ -1,10 +1,12 @@
 import random
 import math
 
+
 # Buffon needle 시뮬레이션 함수
-def BuffonTest(needleLen, lineInterval, planeWid, simulTimes):
+def BuffonTest(needleLen, lineInterval, planeWid, simulTimeList):
     touchedTimes = 0  # 바늘이 몇 번 선에 닿았는지 저장하는 변수
-    for i in range(simulTimes):  # simulTimes만큼 바늘을 떨어뜨린다
+    tmpResultList = []
+    for i in range(simulTimeList[-1]):  # simulTimes만큼 바늘을 떨어뜨린다
         needlePos = random.uniform(0, planeWid)  # 바늘이 처음 바닥에 닿는 위치
         needleTheta = random.uniform(0, math.pi)  # 바늘이 어느 방향으로 넘어지는지 각도(x축 1사분면을 기준으로)
 
@@ -33,5 +35,7 @@ def BuffonTest(needleLen, lineInterval, planeWid, simulTimes):
         else:
             print("Failure:", i, "번째 바늘은 선에 닿지 못했습니다.")
 
-    print("확률:", touchedTimes / simulTimes)
-    return (2 * simulTimes * needleLen) / (touchedTimes * lineInterval)
+        if (i + 1) in simulTimeList:
+            tmpResultList.append((2 * (i + 1) * needleLen) / (touchedTimes * lineInterval))
+
+    return simulTimeList, tmpResultList
