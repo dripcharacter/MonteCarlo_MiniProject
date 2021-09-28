@@ -84,13 +84,13 @@ buffon_error_manuf_dir = "./" + currentTime + "/" + currentTime + "_buffon_error
 make_plot_file(buffonTimeList, buffonResultList, "pi cal result", "n(times)", "pi", buffon_result_dir)
 buffonTimeLogList = []
 for entry in buffonTimeList:
-    buffonTimeLogList.append(math.log2(entry))
+    buffonTimeLogList.append(math.log(entry))
 make_plot_file(buffonTimeLogList, buffonResultList, "pi cal result", "log(n)(times)", "pi", buffon_result_log_dir)
 make_plot_file(buffonTimeList, buffonErrorList, "pi cal error result", "n(times)", "error", buffon_error_dir)
 buffonErrorManufList = []
 for error in buffonErrorList:
-    buffonErrorManufList.append(math.log2(1 / (error ** 2)))
-make_plot_file(buffonTimeLogList, buffonErrorManufList, "pi cal error result", "log(n)(times)", "log(1/error^2)",
+    buffonErrorManufList.append(math.log(error))
+make_plot_file(buffonTimeLogList, buffonErrorManufList, "pi cal error result", "log(n)(times)", "log(error)",
                buffon_error_manuf_dir)
 
 # 정n각형에 대한 hit-or-miss 테스트의 다양한 결과들을 저장할 디렉터리
@@ -104,16 +104,16 @@ make_plot_file(homTimeList, homResultList, "pi cal with " + str(angleNum) + "-re
                hom_result_dir)
 homTimeLogList = []
 for entry in homTimeList:
-    homTimeLogList.append(math.log2(entry))
+    homTimeLogList.append(math.log(entry))
 make_plot_file(homTimeLogList, homResultList, "pi cal with " + str(angleNum) + "-regular polygon result",
                "log(n)(times)", "pi", hom_result_log_dir)
 make_plot_file(homTimeList, homErrorList, "pi cal error with " + str(angleNum) + "-regular polygon result", "n(times)",
                "error", hom_error_dir)
 homErrorManufList = []
 for error in homErrorList:
-    homErrorManufList.append(math.log2(1 / (error ** 2)))
+    homErrorManufList.append(math.log(error))
 make_plot_file(homTimeLogList, homErrorManufList, "pi cal error with " + str(angleNum) + "-regular polygon result",
-               "log(n)(times)", "log(1/error^2)", hom_error_manuf_dir)
+               "log(n)(times)", "log(error)", hom_error_manuf_dir)
 
 # n차원에서의 hit-or-miss 테스트의 다양한 결과들을 저장할 디렉터리
 homNDim_result_dir = "./" + currentTime + "/" + currentTime + "_homNDim_result.png"
@@ -126,16 +126,16 @@ make_plot_file(homNDimTimeList, homNDimResultList, "pi cal with " + str(dimensio
                homNDim_result_dir)
 homNDimTimeLogList = []
 for entry in homNDimTimeList:
-    homNDimTimeLogList.append(math.log2(entry))
+    homNDimTimeLogList.append(math.log(entry))
 make_plot_file(homNDimTimeLogList, homNDimResultList, "pi cal with " + str(dimension) + "-dim result", "log(n)(times)",
                "pi", homNDim_result_log_dir)
 make_plot_file(homNDimTimeList, homNDimErrorList, "pi cal error with " + str(dimension) + "-dim result", "n(times)",
                "error", homNDim_error_dir)
 homNDimErrorManufList = []
 for error in homNDimErrorList:
-    homNDimErrorManufList.append(math.log2(1 / (error ** 2)))
+    homNDimErrorManufList.append(math.log(error))
 make_plot_file(homNDimTimeLogList, homNDimErrorManufList, "pi cal error with " + str(dimension) + "-dim result",
-               "log(n)(times)", "log(1/error^2)", homNDim_error_manuf_dir)
+               "log(n)(times)", "log(error)", homNDim_error_manuf_dir)
 
 
 # 다양한 테스트들의 결과들을 비교하는 plot 파일들을 저장하는 디렉터리
@@ -158,6 +158,6 @@ make_multi_plot_file("pi cal result", "log(n)(times)", "pi", cmp_result_log_dir,
 make_multi_plot_file("pi cal error result", "n(times)", "error", cmp_error_dir, buffonTimeList, buffonErrorList,
                      "buffonNeedle", homTimeList, homErrorList, cmp_hom_label, homNDimTimeList, homNDimErrorList,
                      cmp_homNDim_label)
-make_multi_plot_file("pi cal error result", "log(n)(times)", "log(1/error^2)", cmp_error_manuf_dir, buffonTimeLogList,
+make_multi_plot_file("pi cal error result", "log(n)(times)", "log(error)", cmp_error_manuf_dir, buffonTimeLogList,
                      buffonErrorManufList, "buffonNeedle", homTimeLogList, homErrorManufList, cmp_hom_label,
                      homNDimTimeLogList, homNDimErrorManufList, cmp_homNDim_label)
