@@ -9,4 +9,8 @@ hit-or-miss 시뮬레이션을 정n각형을 바탕으로 하는 파일
 # htmForMultiDim.py  
 hit-or-miss 시뮬레이션을 n차원 공간에서 하는 파일  
 # Command line  
+<<<<<<< HEAD
 python main.py '바늘길이' '선간격' '바닥너비' '정n각형의 꼭짓점 갯수' '내접원의 반지름' 'htmForMultiDim에서의 차원'  
+=======
+python main.py '바늘길이' '선간격' '바닥너비' '정n각형의 꼭짓점 갯수' '내접원의 반지름' 'htmForMultiDim에서의 차원'  
+>>>>>>> 273e6d7b59693814240bd201c90915c23178aa56
