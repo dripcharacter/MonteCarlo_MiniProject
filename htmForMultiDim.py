@@ -1,6 +1,4 @@
 import random
-import math
-import ghalton
 
 
 # n-차원의 초구와 초입방체로 hit-or-miss 테스트를 하는 함수

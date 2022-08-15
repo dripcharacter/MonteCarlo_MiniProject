@@ -1,4 +1,3 @@
-from ClosedSystemElement import ClosedSystemElement
 from ClosedSystem import ClosedSystem
 import math
 import sys

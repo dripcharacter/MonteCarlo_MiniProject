@@ -1,4 +1,3 @@
-import math
 # 현재 hitOrMiss.py를 갈아엎으며 필요 없어진 파일
 class RegularPolygon:
 

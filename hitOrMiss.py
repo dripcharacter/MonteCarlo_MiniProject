@@ -1,8 +1,6 @@
 import random
 import math
 from regularPolygon import RegularPolygon
-import numpy as np
-import matplotlib.pyplot as plt
 
 # 정n각형의 각 꼭짓점 좌표를 찍는 함수(현재는 hit-or-miss를 바꾸면서 사용하지 않게 됨)
 def makeRegularPolygon(angleNum, radius):

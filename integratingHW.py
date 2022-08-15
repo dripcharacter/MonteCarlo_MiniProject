@@ -1,5 +1,4 @@
 from scipy import integrate
-from scipy import stats
 import math
 import matplotlib.pyplot as plt
 import numpy as np

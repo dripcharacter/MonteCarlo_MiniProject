@@ -1,4 +1,3 @@
-from ClosedSystemElement import ClosedSystemElement
 from ClosedSystem import ClosedSystem
 from DensityOfStates import DensityOfStates
 import sys
