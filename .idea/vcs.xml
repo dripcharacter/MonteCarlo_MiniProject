@@ -3,6 +3,5 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ghalton" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/pyquasirand" vcs="Git" />
   </component>
 </project>

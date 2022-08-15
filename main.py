@@ -61,6 +61,7 @@ currentTime = str(now.tm_year) + "-" + str(now.tm_mon) + "-" + str(now.tm_mday) 
 
 simulTimeList = [100, 400, 900, 1600, 2500, 3600, 4900, 6400, 8100, 10000, 40000,
                  90000, 160000, 250000, 360000, 490000, 640000, 810000, 1000000]  # 시뮬레이션을 하면서 언제 중간 결과를 기록할지의 리스트
+simulTimeList = list(range(100, 1000001))
 
 # 순서대로 buffon-needle 테스트, 정n각형에 대한 hit-or-miss 테스트, n차원 속 초구와 초 입방체에 대한 hit-or-miss 테스트 및 리스트에 저장
 buffonTimeList, buffonResultList = buffonTest.BuffonTest(needleLen, lineInterval, planeWid, simulTimeList)
